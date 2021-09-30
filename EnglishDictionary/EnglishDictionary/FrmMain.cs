@@ -96,8 +96,11 @@ namespace EnglishDictionary
 
         private void BtnDeleteSelected_Click(object sender, EventArgs e)
         {
-            DialogResult DR = MessageBox.Show(" WORD WILL BE LOST,WANT TO DELEAT ? ", "warrning!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DR == DialogResult.Yes)
+
+            if (LbDictionaryData.SelectedItem != null)
+            {
+                DialogResult DR = MessageBox.Show(" WORD WILL BE LOST,WANT TO DELEAT ? ", "warrning!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+               if (DR == DialogResult.Yes)
             {
                 DlistofWords.ResetBindings(false);
                 try
@@ -123,11 +126,15 @@ namespace EnglishDictionary
                 }
 
             }
-            else if (DR == DialogResult.No)
+               else if (DR == DialogResult.No)
             {
                 //do thothing 
             }
-            
+            }
+            else
+            {
+              MessageBox.Show("Nothing selected", "Erro");
+            }
             
             // Ask for confirmation; Warn for unrecoverability
             // If confirmed delete the word
@@ -147,18 +154,21 @@ namespace EnglishDictionary
 
         private void BtnDeleteAll_Click(object sender, EventArgs e)
         {
+           
+            
+                 DialogResult DR = MessageBox.Show(" WANT TO DELEAT ALL ? ", "warrning!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                 if (DR == DialogResult.Yes)
+                 {
+                  soterword.DELETALL();
 
-            DialogResult DR = MessageBox.Show(" WANT TO DELEAT ALL ? ", "warrning!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DR == DialogResult.Yes)
-            {
-                soterword.DELETALL();
+                  }
+                 else if (DR == DialogResult.No)
+                  {
 
-            }
-            else if (DR == DialogResult.No)
-            {
-
-            }
-            DlistofWords.ResetBindings(false);
+                  }
+                 DlistofWords.ResetBindings(false);
+            
+            
             //loadData LD = new loadData();
             
             // Ask for confirmation TWICE; Warn for unrecoverability

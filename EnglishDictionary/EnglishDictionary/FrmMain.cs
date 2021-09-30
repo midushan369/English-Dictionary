@@ -59,6 +59,9 @@ namespace EnglishDictionary
             LbDictionaryData.DisplayMember = "WordAndMean";
             DlistofWords.ResetBindings(false);
 
+            TxtMeaning.Clear();
+            TxtWord.Clear();
+
             // Check if the word already exists
             // If it exists, check if the meaning already exists
             // If the meaning already exists, replace it after confirmation
@@ -68,9 +71,7 @@ namespace EnglishDictionary
 
         private void BtnFind_Click(object sender, EventArgs e)
         {
-            
-            // LbDictionaryData.DisplayMember = "";
-            //LbDictionaryData.Items.Add()
+           
 
 
             //findign the matching the word form List
@@ -80,56 +81,96 @@ namespace EnglishDictionary
                 if (listwms.Dlist[i].words.Contains(textBox1.Text) == true)
                 {
                     LbDictionaryData.Items.Clear();
-                    LbDictionaryData.Items.Add(listwms.Dlist[i].WordAndMean);
-                    serchword = listwms.Dlist[i].WordAndMean;
+                    LbDictionaryData.Items.Add("word -> " +listwms.Dlist[i].words);
+                    LbDictionaryData.Items.Add("_____Meanings_____");
+                    foreach (string s in listwms.Dlist[i].MEANS)
+                    {
+                        LbDictionaryData.Items.Add(s);
+                    }
+                    serchword = "word -> " +listwms.Dlist[i].words;
                     break;
                 }
             }
-
-
             DlistofWords.ResetBindings(false);
 
-
+            textBox1.Clear();
             // Search for the matching words
             // If there are results display them in the list box
         }
 
         private void BtnDeleteSelected_Click(object sender, EventArgs e)
         {
-
+            //only if somthing selectded will be deleat 
             if (LbDictionaryData.SelectedItem != null)
             {
-                DialogResult DR = MessageBox.Show(" WORD WILL BE LOST,WANT TO DELEAT ? ", "warrning!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult DR = MessageBox.Show(" WORD AND MEANING WILL BE LOST,WANT TO DELETE ? ", "warrning!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                if (DR == DialogResult.Yes)
-            {
-                DlistofWords.ResetBindings(false);
-                try
-                {
+               {
+                 
+                 try
+                 {
                     //try theis delete code
                     listwms.Dlist.Remove((wordmenset)LbDictionaryData.SelectedItem);
                     DlistofWords.ResetBindings(false);
-                }
+                 }
 
-                catch
-                {
-
+                 catch
+                 {
+                    string deletemean = (string)LbDictionaryData.SelectedItem;
                     //serching the word
                     //if erro occur try this
                     for (int i = listwms.Dlist.Count - 1; i >= 0; i--)
                     {
-                        if (listwms.Dlist[i].WordAndMean.Contains(serchword) == true)
-                        {
-                            listwms.Dlist.RemoveAt(i);
-                            LbDictionaryData.Items.Clear();
-                        }
-                    }
-                }
+                            if (listwms.Dlist[i].MEANS.Contains(deletemean) == true)
+                            {
+                                listwms.Dlist[i].MEANS.Remove(deletemean);
+                                LbDictionaryData.Items.Remove(deletemean);
 
-            }
+                                //after deleting seting WordAndMean
+                                for (int l = 0; l <=  listwms.Dlist[i].MEANS.Count; l++)
+                                {
+
+                                    if(l == 0 && listwms.Dlist[i].MEANS != null)
+                                    {
+                                        try // after deleting the last meaning can't add a meaning  to get arund the erro  put an try catch
+                                        {
+                                         listwms.Dlist[i].WordAndMean = "'" + listwms.Dlist[i].words + "' Word's Meaning  :- " + " '" + listwms.Dlist[i].MEANS[0] + " '";
+                                        } 
+                                        catch
+                                        {
+                                            listwms.Dlist[i].WordAndMean = "'" + listwms.Dlist[i].words + "' Word's Meaning :- ";
+                                        }
+                                       
+                                    }
+                                    if(l>0 && l < listwms.Dlist[i].MEANS.Count)
+                                    { 
+                                        listwms.Dlist[i].WordAndMean = listwms.Dlist[i].WordAndMean + ", '" + listwms.Dlist[i].MEANS[l] + " '";
+                                    }
+                                }
+                                
+
+                            }
+                            //deleteing word after serching 
+                            if(serchword == deletemean)
+                            {
+                                listwms.Dlist.RemoveAt(i);
+                                LbDictionaryData.Items.Clear();
+                                MessageBox.Show("working");
+                            }
+                            
+                           
+                         
+                            
+                    }  
+                   
+                 }
+
+               }
                else if (DR == DialogResult.No)
-            {
+               {
                 //do thothing 
-            }
+                }
+                
             }
             else
             {
@@ -143,13 +184,14 @@ namespace EnglishDictionary
         private void BtnListAll_Click(object sender, EventArgs e)
         {
             // Iteratively populate the list box in the ascending order of words
-            
+            //Sorting the list in ascending order of word
+            listwms.Dlist.Sort();
             //listing all the things form list 
             LbDictionaryData.DataSource = DlistofWords;
             LbDictionaryData.DisplayMember = "WordAndMean";
             DlistofWords.ResetBindings(false);
-            //Sorting the list in ascending order of word
-            listwms.Dlist.Sort();
+            
+            
         }
 
         private void BtnDeleteAll_Click(object sender, EventArgs e)
@@ -169,7 +211,7 @@ namespace EnglishDictionary
                  DlistofWords.ResetBindings(false);
             
             
-            //loadData LD = new loadData();
+     
             
             // Ask for confirmation TWICE; Warn for unrecoverability
             // If confirmed delete the word

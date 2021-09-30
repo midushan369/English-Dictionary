@@ -15,7 +15,7 @@ namespace EnglishDictionary
         public void store(string word, string mean)
         {
             //if user didn't input word this message box will execute 
-            if (word == "" && mean == "")
+            if (word == "")
             {
                 input = false;
                 message("Erro", "instert word pleas");
@@ -24,6 +24,10 @@ namespace EnglishDictionary
             //if there is  a word this will execute 
             if (input == true)
             {
+                if(mean == "")
+                {
+                    mean = null;
+                }
                 // this will cteate an object   
                 wordmenset wms = new wordmenset();
 
@@ -47,7 +51,7 @@ namespace EnglishDictionary
                         }
                     }
                     //it will check exsisting word has a meaning
-                    if (listwms.Dlist[i].words == word && listwms.Dlist[i].MEANS.Contains(mean) == true)
+                    if (listwms.Dlist[i].words == word && listwms.Dlist[i].MEANS != null && listwms.Dlist[i].MEANS.Contains(mean) == true)
                     {
                         DialogResult DR = MessageBox.Show("Meaning alredy  Exsist Do whant to replace it ? ", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (DR == DialogResult.Yes)
@@ -61,26 +65,24 @@ namespace EnglishDictionary
                         }
                         break;
                     }
+                    //if a word without  meaning exsist
+                    if(listwms.Dlist[i].words == word && listwms.Dlist[i].MEANS == null)
+                    {
+                        listwms.Dlist[i].means(mean);
+                        break;
+                    }
                     // if it's Diferent meaning 
                     if (listwms.Dlist[i].words == word && listwms.Dlist[i].MEANS.Contains(mean) == false)
                     {
-
-                        DialogResult DR = MessageBox.Show("Different Meaning,Do whant to add the meaning ? ", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (DR == DialogResult.Yes)
-                        {
-                            listwms.Dlist[i].MEANS.Add(mean);
-                            string newset = listwms.Dlist[i].WordAndMean + " , '" + mean + " '";
-                            listwms.Dlist[i].WordAndMean = newset;
-
+                     
+                      if(mean != null)
+                        { 
+                          listwms.Dlist[i].MEANS.Add(mean);
+                          string newset = listwms.Dlist[i].WordAndMean + " , '" + mean + " '";
+                          listwms.Dlist[i].WordAndMean = newset;
                         }
-                        else if (DR == DialogResult.No)
-                        {
 
-                        }
-                        break;
-
-
-
+                      break;
                     }
                     //it will set new word and meaning
                     if (listwms.Dlist[i].words == null && listwms.Dlist[i].MEANS == null )
@@ -152,9 +154,8 @@ namespace EnglishDictionary
             }
         }
       
-        
-        // short method for massage Box
-       public void message(string title, string message)
+
+        public void message(string title, string message)
         {
             MessageBox.Show(message, title);
         }

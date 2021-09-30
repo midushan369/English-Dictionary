@@ -44,7 +44,6 @@ namespace EnglishDictionary
             this.BtnFind = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -196,19 +195,11 @@ namespace EnglishDictionary
             this.timer1.Interval = 60000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(328, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LbDictionaryData);
@@ -241,7 +232,6 @@ namespace EnglishDictionary
         private System.Windows.Forms.Button BtnFind;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

@@ -17,7 +17,7 @@ namespace EnglishDictionary
         public List<string> MEANS { get; set; }
 
         //to Display the meaning 
-        public string WordAndMean { get; set; }
+        public string WordAndMean { get;set;}
 
 
 
@@ -35,10 +35,22 @@ namespace EnglishDictionary
         // it will set to set to the meanings  to string List MEANS
         public void means(string mean)
         {
-          MEANS = new List<string> { mean };
-          WordAndMean = " '" + words + "'" + " Word's Meaning :-  " + " '" + mean + "'";
+         if(mean !=null)
+            {
+                MEANS = new List<string> { mean };
+                WordAndMean = " '" + words + "'" + " Word's Meaning :-  " + " '" + mean + "'";
+            }
+          else
+            {
+                WordAndMean = " '" + words + "'";
+            }
 
         }
 
+        //private void setwordmean()
+        //{
+        //    WordAndMean = words +"->"+ MEANS[0];
+        //}
+        
     }
 }

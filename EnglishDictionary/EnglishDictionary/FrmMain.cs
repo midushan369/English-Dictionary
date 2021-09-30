@@ -73,7 +73,7 @@ namespace EnglishDictionary
             //LbDictionaryData.Items.Add()
 
 
-
+            //findign the matching the word form List
             for (int i = listwms.Dlist.Count - 1; i >= 0; i--)
             {
                 LbDictionaryData.DataSource = null;
@@ -96,29 +96,39 @@ namespace EnglishDictionary
 
         private void BtnDeleteSelected_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult DR = MessageBox.Show(" WORD WILL BE LOST,WANT TO DELEAT ? ", "warrning!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
             {
-                listwms.Dlist.Remove((wordmenset)LbDictionaryData.SelectedItem);
                 DlistofWords.ResetBindings(false);
+                try
+                {
+                    //try theis delete code
+                    listwms.Dlist.Remove((wordmenset)LbDictionaryData.SelectedItem);
+                    DlistofWords.ResetBindings(false);
+                }
+
+                catch
+                {
+
+                    //serching the word
+                    //if erro occur try this
+                    for (int i = listwms.Dlist.Count - 1; i >= 0; i--)
+                    {
+                        if (listwms.Dlist[i].WordAndMean.Contains(serchword) == true)
+                        {
+                            listwms.Dlist.RemoveAt(i);
+                            LbDictionaryData.Items.Clear();
+                        }
+                    }
+                }
+
+            }
+            else if (DR == DialogResult.No)
+            {
+                //do thothing 
             }
             
-            catch 
-            {
-                //listwms.Dlist.Remove(listwms.Dlist.Contains());
-                //serchword
-
-                for (int i = listwms.Dlist.Count - 1; i >= 0; i--)
-                {  
-                     if(listwms.Dlist[i].WordAndMean.Contains(serchword) == true)
-                     {
-                         listwms.Dlist.RemoveAt(i);
-                         LbDictionaryData.Items.Clear();
-                    }
-                } 
-            }
-            //loadData LD = new loadData();
-
-            //soterword.remove(textBox1.Text);
+            
             // Ask for confirmation; Warn for unrecoverability
             // If confirmed delete the word
         }
@@ -127,9 +137,11 @@ namespace EnglishDictionary
         {
             // Iteratively populate the list box in the ascending order of words
             
+            //listing all the things form list 
             LbDictionaryData.DataSource = DlistofWords;
             LbDictionaryData.DisplayMember = "WordAndMean";
             DlistofWords.ResetBindings(false);
+            //Sorting the list in ascending order of word
             listwms.Dlist.Sort();
         }
 
@@ -161,6 +173,7 @@ namespace EnglishDictionary
             LD.fileupdate();       
         }
 
+        //this method add after changeing user dot't have to wait for timer to tick(mainly for devoping purpose)
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             loadData LD = new loadData();

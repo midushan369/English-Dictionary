@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\complite\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj": {}
+    "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj": {}
   },
   "projects": {
-    "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\complite\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj": {
+    "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\complite\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj",
+        "projectUniqueName": "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj",
         "projectName": "EnglishDictionary",
-        "projectPath": "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\complite\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj",
+        "projectPath": "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\EnglishDictionary\\EnglishDictionary\\EnglishDictionary.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\complite\\EnglishDictionary\\EnglishDictionary\\obj\\",
+        "outputPath": "E:\\anc-c.s\\sesaon 5\\data stractcher\\final\\EnglishDictionary\\EnglishDictionary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

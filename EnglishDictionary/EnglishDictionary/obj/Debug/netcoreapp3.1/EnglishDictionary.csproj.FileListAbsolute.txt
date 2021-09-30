@@ -78,3 +78,19 @@ E:\anc-c.s\sesaon 5\data stractcher\as2\New folder (3)\complite\EnglishDictionar
 E:\anc-c.s\sesaon 5\data stractcher\as2\New folder (3)\complite\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.dll
 E:\anc-c.s\sesaon 5\data stractcher\as2\New folder (3)\complite\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.pdb
 E:\anc-c.s\sesaon 5\data stractcher\as2\New folder (3)\complite\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.genruntimeconfig.cache
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\bin\Debug\netcoreapp3.1\EnglishDictionary.exe
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\bin\Debug\netcoreapp3.1\EnglishDictionary.deps.json
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\bin\Debug\netcoreapp3.1\EnglishDictionary.runtimeconfig.json
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\bin\Debug\netcoreapp3.1\EnglishDictionary.runtimeconfig.dev.json
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\bin\Debug\netcoreapp3.1\EnglishDictionary.dll
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\bin\Debug\netcoreapp3.1\EnglishDictionary.pdb
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.csproj.AssemblyReference.cache
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.FrmMain.resources
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.csproj.GenerateResource.cache
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.GeneratedMSBuildEditorConfig.editorconfig
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.AssemblyInfoInputs.cache
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.AssemblyInfo.cs
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.csproj.CoreCompileInputs.cache
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.dll
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.pdb
+E:\anc-c.s\sesaon 5\data stractcher\final\EnglishDictionary\EnglishDictionary\obj\Debug\netcoreapp3.1\EnglishDictionary.genruntimeconfig.cache

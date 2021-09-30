@@ -92,7 +92,7 @@ namespace EnglishDictionary
                 }
             }
 
-            // it will check if ther is a object 
+            // it will check if ther is a  emty object 
             for (int i = listwms.Dlist.Count - 1; i >= 0; i--)
             {
                if (listwms.Dlist[i].words == null)
@@ -136,22 +136,24 @@ namespace EnglishDictionary
         
         //To Delete all the words and meanig 
         public void DELETALL()
-
         {
             DialogResult DR = MessageBox.Show( " ALL MEANING AND WORD WILL BE LOST DO YOU WANT TO COUNTINUCE ? ", "WORNIG!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
             {
-               for (int i = listwms.Dlist.Count - 1; i >= 0; i--)
-                {
-                    listwms.Dlist.RemoveAt(i);
-                }
+                listwms.Dlist.Clear();
+               //for (int i = listwms.Dlist.Count - 1; i >= 0; i--)
+               // {
+               //     listwms.Dlist.RemoveAt(i);
+               // }
             }
             if(DR == DialogResult.No)
             {
             
             }
         }
-       // short method for massage Box
+      
+        
+        // short method for massage Box
        public void message(string title, string message)
         {
             MessageBox.Show(message, title);

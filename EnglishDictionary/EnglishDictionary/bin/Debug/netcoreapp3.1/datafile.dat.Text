@@ -1,6 +1,7 @@
-{"words":"two","MEANS":["2","1 \u002B 1"],"WordAndMean":" \u0027two\u0027 Word\u0027s Meaning :-   \u00272\u0027 , \u00271 \u002B 1 \u0027"}
-{"words":"three","MEANS":["3","two \u002B one"],"WordAndMean":" \u0027three\u0027 Word\u0027s Meaning :-   \u00273\u0027 , \u0027two \u002B one \u0027"}
-{"words":"six","MEANS":["6","fore \u002B two"],"WordAndMean":" \u0027six\u0027 Word\u0027s Meaning :-   \u00276\u0027 , \u0027fore \u002B two \u0027"}
-{"words":"one","MEANS":["1","2 -1"],"WordAndMean":" \u0027one\u0027 Word\u0027s Meaning :-   \u00271\u0027 , \u00272 -1 \u0027"}
-{"words":"fore","MEANS":["4","two \u002B two"],"WordAndMean":" \u0027fore\u0027 Word\u0027s Meaning :-   \u00274\u0027 , \u0027two \u002B two \u0027"}
 {"words":"five","MEANS":["5","fore \u002B one"],"WordAndMean":" \u0027five\u0027 Word\u0027s Meaning :-   \u00275\u0027 , \u0027fore \u002B one \u0027"}
+{"words":"fore","MEANS":["4","two \u002B two"],"WordAndMean":" \u0027fore\u0027 Word\u0027s Meaning :-   \u00274\u0027 , \u0027two \u002B two \u0027"}
+{"words":"Naruto","MEANS":["big idiot"],"WordAndMean":"\u0027Naruto\u0027 Word\u0027s Meaning :-  , \u0027big idiot \u0027"}
+{"words":"one","MEANS":["1","2 -1"],"WordAndMean":" \u0027one\u0027 Word\u0027s Meaning :-   \u00271\u0027 , \u00272 -1 \u0027"}
+{"words":"six","MEANS":["6","fore \u002B two"],"WordAndMean":" \u0027six\u0027 Word\u0027s Meaning :-   \u00276\u0027 , \u0027fore \u002B two \u0027"}
+{"words":"three","MEANS":["3","two \u002B one"],"WordAndMean":" \u0027three\u0027 Word\u0027s Meaning :-   \u00273\u0027 , \u0027two \u002B one \u0027"}
+{"words":"two","MEANS":["2","1 \u002B 1"],"WordAndMean":" \u0027two\u0027 Word\u0027s Meaning :-   \u00272\u0027 , \u00271 \u002B 1 \u0027"}
